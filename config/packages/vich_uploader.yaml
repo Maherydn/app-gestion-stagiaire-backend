@@ -1,0 +1,13 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        cv:
+            uri_prefix: /files/cv
+            upload_destination: '%kernel.project_dir%/public/files/cv'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+        intershipDemand:
+            uri_prefix: /files/intershipDemand
+            upload_destination: '%kernel.project_dir%/public/files/intershipDemand'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
