@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 
-#[Route('/recruiter/intern', name: 'recruiter.intern')]
+#[Route('/api/recruiter/intern', name: 'recruiter.intern')]
 class InternController extends AbstractController
 {
     #[Route('/create', name: '.create', methods: ['POST'])]
@@ -33,12 +33,15 @@ class InternController extends AbstractController
         }
 
         $fileMappings = [
-            'cvFile' => 'CvFile',
-            'intershipDemandFile' => 'IntershipDemandFile',
+            'intershipCv' => 'IntershipCvFile',
+            'intershipDemand' => 'IntershipDemandFile',
         ];
 
         foreach ($fileMappings as $fileKey => $methodSuffix) {
             if ($file = $request->files->get($fileKey)) {
+                if ($file->getClientMimeType() !== 'application/pdf') {
+                    return $this->json(['error' => 'Invalid file type, only PDFs are allowed'], Response::HTTP_BAD_REQUEST);
+                }
                 $method = 'set' . $methodSuffix;
                 if (method_exists($intern, $method)) {
                     $intern->$method($file);
@@ -62,7 +65,7 @@ class InternController extends AbstractController
     }
 
     #[Route( name: '.read', methods: ['GET'])]
-    public function read(InternRepository $internRepository, DepartementRepository $departementRepository): Response
+    public function read(InternRepository $internRepository): Response
     {
         $interns = $internRepository->findAll();
 
@@ -81,22 +84,30 @@ class InternController extends AbstractController
     {
 
         $formData = $request->request->all();
-
         foreach ($formData as $key => $value) {
             if (property_exists($intern, $key)) {
-                if ($key === 'departement') {
+                $setter = 'set' . ucfirst($key);
+
+                if (in_array($key, ['intershipStartAt', 'intershipFinishAt'])) { // Liste des propriétés à traiter comme des dates
+                    $dateValue = \DateTimeImmutable::createFromFormat('Y-m-d', $value);
+                    if ($dateValue) {
+                        $intern->$setter($dateValue);
+                    }
+                } else if ($key === 'departement') {
                     $departement = $departementRepository->find($value);
-                    $intern->setDepartement($departement);
-                }else{
-                    $setter = 'set' . ucfirst($key);
+                    if ($departement) {
+                        $intern->setDepartement($departement);
+                    }
+                } else {
                     $intern->$setter($value);
                 }
             }
         }
+
         $fileMappings = [
-            'intershipCvFile' => 'IntershipCvFile',
-            'intershipDemandFile' => 'IntershipDemandFile',
-//            autorisation , attestation,
+            'intershipCv' => 'IntershipCvFile',
+            'intershipDemand' => 'IntershipDemandFile',
+            'intershipAuthorization' => 'IntershipAuthorizationFile',
         ];
 
         foreach ($fileMappings as $fileKey => $methodSuffix) {

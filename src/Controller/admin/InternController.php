@@ -13,16 +13,16 @@ use Symfony\Component\Routing\Requirement\Requirement;
 #[Route('/admin/intern', name: 'admin.intern')]
 class InternController extends AbstractController
 {
-
-    #[Route( name: '.read', methods: ['GET'])]
+    #[Route(name: '.read', methods: ['GET'])]
     public function read(InternRepository $internRepository): Response
     {
         $interns = $internRepository->findAll();
 
         return $this->json($interns, 200, [], [
-            'groups' => ['intern.recruiter']
+            'groups' => ['recruiter.show']
         ]);
     }
+
 
     #[Route('/{id}', name: '.delete', requirements: ['id' => Requirement::DIGITS], methods: ['DELETE'])]
     public function delete(Intern $intern, EntityManagerInterface $em): Response

@@ -34,5 +34,6 @@ security:
         - { path: ^/api/login_check, roles: PUBLIC_ACCESS }
         - { path: ^/api/token/refresh, roles: PUBLIC_ACCESS }
         - { path: ^/api/supervisor, roles: ROLE_SUPERVISOR }
+        - { path: ^/api/recruiter, roles: ROLE_RECRUITER }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/api/(login|token/refresh), roles: PUBLIC_ACCESS }

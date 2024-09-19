@@ -15,7 +15,7 @@ class Intern
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['recruiter.show'])]
+    #[Groups(['recruiter.show', 'supervisor.show'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
@@ -40,7 +40,7 @@ class Intern
 
     #[ORM\Column(length: 255)]
     #[Groups(['recruiter.show', 'supervisor.show'])]
-    private ?string $status = 'non valider';
+    private ?string $status = 'invalidate';
 
     #[ORM\Column(length: 255, nullable: true)]
     #[Groups(['recruiter.show', 'supervisor.show'])]
@@ -60,6 +60,9 @@ class Intern
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $intershipAuthorization = null;
 
+    #[Vich\UploadableField(mapping: 'intershipAuthorization', fileNameProperty: 'intershipAuthorization')]
+    private ?File $intershipAuthorizationFile = null;
+
     #[Groups(['recruiter.show'])]
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $intershipConvention = null;
@@ -73,9 +76,11 @@ class Intern
     private ?int $intershipNumber = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups(['recruiter.show', 'supervisor.show'])]
     private ?\DateTimeImmutable $intershipStartAt = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups(['recruiter.show', 'supervisor.show'])]
     private ?\DateTimeImmutable $intershipFinishAt = null;
 
     #[Groups(['recruiter.show'])]
@@ -95,6 +100,9 @@ class Intern
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $statusUpdatedAt = null;
 
     public function getId(): ?int
     {
@@ -325,6 +333,16 @@ class Intern
         return $this;
     }
 
+    public function getIntershipAuthorizationFile(): ?File
+    {
+        return $this->intershipAuthorizationFile;
+    }
+
+    public function setIntershipAuthorizationFile(?File $intershipAuthorizationFile): void
+    {
+        $this->intershipAuthorizationFile = $intershipAuthorizationFile;
+    }
+
     public function getCreatedAt(): ?\DateTimeImmutable
     {
         return $this->createdAt;
@@ -345,6 +363,18 @@ class Intern
     public function setUpdatedAt(\DateTimeImmutable $updatedAt): static
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getStatusUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->statusUpdatedAt;
+    }
+
+    public function setStatusUpdatedAt(?\DateTimeImmutable $statusUpdatedAt): static
+    {
+        $this->statusUpdatedAt = $statusUpdatedAt;
 
         return $this;
     }

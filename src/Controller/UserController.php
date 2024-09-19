@@ -2,35 +2,41 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class UserController extends AbstractController
 {
-    #[Route('/user/create', name: 'app.create')]
-    public function index(EntityManagerInterface $em, UserPasswordHasherInterface
-                                                 $userPasswordHasher): Response
-    {
-        $user = new User();
+    private TokenStorageInterface $tokenStorage;
 
-        $user->setUsername('daniel');
-        $user->setPassword(
-            $userPasswordHasher->hashPassword(
-                $user,
-                '12456'
-            )
+    public function __construct(TokenStorageInterface $tokenStorage)
+    {
+        $this->tokenStorage = $tokenStorage;
+    }
+
+
+    #[Route('/api/user_info', name: 'user.info', methods: ['GET'])]
+    public function getUserInfo(): Response
+    {
+        // Assure-toi que le token est présent et valide
+        $token = $this->tokenStorage->getToken();
+        if (!$token || !$token->getUser() instanceof UserInterface) {
+            return $this->json(['error' => 'Unauthorized'], 401);
+        }
+
+        // Obtient les informations utilisateur
+        $user = $token->getUser();
+
+        return $this->json(
+            $user,
+            Response::HTTP_OK,
+            [],
+            [
+                'groups' => ['admin.show']
+            ]
         );
-        $em->persist($user);
-        $em->flush();
-        return $this->render('user/index.html.twig', [
-            'controller_name' => 'UserController',
-        ]);
     }
 }
-
-
-

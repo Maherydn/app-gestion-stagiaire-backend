@@ -78,7 +78,7 @@ class UserController  extends AbstractController
     }
 
     #[Route( '', name: '.read', methods: ['GET'])]
-    public function read(UserRepository $userRepository): Response
+    public function readUsers(UserRepository $userRepository): Response
     {
         $user = $userRepository->findAll();
 
@@ -92,7 +92,7 @@ class UserController  extends AbstractController
          );
     }
 
-    #[Route('/{id}', name: '.update', requirements: ['id' => Requirement::DIGITS], methods: ['PATCH'])]
+    #[Route('/{id}', name: '.update', requirements: ['id' => Requirement::DIGITS], methods: ['PUT'])]
     public function updateUser(
         User $user,
         #[MapRequestPayload] UserUpdateDTO $userUpdateDTO,

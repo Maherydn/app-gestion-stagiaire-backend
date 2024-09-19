@@ -27,6 +27,17 @@ class InternRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function findByStatusUpdateAt(\DateTime $date)
+    {
+        return $this->createQueryBuilder('i')
+        ->where('i.status = :status')
+        ->andWhere('i.statusUpdatedAt <= :date')
+        ->setParameter('status', 'fini')
+        ->setParameter('date', $oneYearAgo)
+        ->getQuery()
+        ->getResult();
+    }
+
 //    /**
 //     * @return Intern[] Returns an array of Intern objects
 //     */
