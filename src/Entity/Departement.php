@@ -14,11 +14,11 @@ class Departement
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(["admin.show", "recruiter.show", 'supervisor.show'])]
+    #[Groups(["admin.show", "recruiter.show", 'supervisor.show', 'departement.show'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255, unique: true)]
-    #[Groups(["admin.show", "recruiter.show", 'supervisor.show'])]
+    #[Groups(["admin.show", "recruiter.show", 'supervisor.show', 'departement.show'])]
     private ?string $name = null;
 
     /**

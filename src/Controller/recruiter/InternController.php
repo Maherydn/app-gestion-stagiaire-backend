@@ -93,7 +93,7 @@ class InternController extends AbstractController
                     if ($dateValue) {
                         $intern->$setter($dateValue);
                     }
-                } else if ($key === 'departement') {
+                } elseif ($key === 'departement') {
                     $departement = $departementRepository->find($value);
                     if ($departement) {
                         $intern->setDepartement($departement);

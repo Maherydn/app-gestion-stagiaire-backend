@@ -33,4 +33,6 @@ class InternController extends AbstractController
             'groups' => ['recruiter.show']
         ]);
     }
+
+
 }

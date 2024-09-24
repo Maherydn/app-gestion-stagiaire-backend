@@ -3,11 +3,14 @@ security:
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
 
+#    providers:
+#        app_user_provider:
+#            entity:
+#                class: App\Entity\User
+#                property: username
     providers:
-        app_user_provider:
-            entity:
-                class: App\Entity\User
-                property: username
+        custom_user_provider:
+            id: App\Security\UserProvider
 
     firewalls:
         api_login:
@@ -17,7 +20,8 @@ security:
                 check_path: /api/login_check
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-            provider: app_user_provider  # Fournisseur d'utilisateurs
+#            provider: app_user_provider  # Fournisseur d'utilisateurs
+            provider: custom_user_provider
 
 
         api:

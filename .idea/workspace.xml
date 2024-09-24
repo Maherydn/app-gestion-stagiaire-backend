@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef29ece2-45f5-4b3b-99f2-927dae1ccdd5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="8d9787cc-7e78-4392-bea7-81c2c8c041be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f59bb52-4b73-4372-ad4f-f33c68720663.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f59bb52-4b73-4372-ad4f-f33c68720663/storage_v2/_src_/schema/app.IXoBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/files/cv/diagramme-des-classes-66e27e1304c7e761960578.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/files/intershipDemand/cas-d-utilisation-66e15baed1d4c734711688.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/files/intershipDemand/diagramme-des-classes-66e15b923b74a658860732.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/admin/InternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/InternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/recruiter/InternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/recruiter/InternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/supervisor/InternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/supervisor/InternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Intern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Intern.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InternRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Departement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Departement.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Maherydn&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Maherydn"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Maherydn/test.git&quot;,
-    &quot;accountId&quot;: &quot;b5fa3def-47d3-494c-9604-70a4e442ec88&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Maherydn/test.git",
+    "accountId": "b5fa3def-47d3-494c-9604-70a4e442ec88"
   }
-}</component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
@@ -78,13 +71,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/gesdinet/jwt-refresh-token-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/ux-turbo" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
@@ -157,6 +153,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
       <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
@@ -167,11 +164,14 @@
       <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
@@ -183,21 +183,13 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/psr/link" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
-      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
-      <path value="$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle" />
-      <path value="$PROJECT_DIR$/vendor/gesdinet/jwt-refresh-token-bundle" />
-      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
-      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
-      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2li2WgT6GR9thRS3oDU9k1ZRXY4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2mU26b8GSrelAZSQAPyvf55D7DL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -213,11 +205,6 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora_aws&quot;
-    ]
   }
 }</component>
   <component name="RunManager">
@@ -237,43 +224,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef29ece2-45f5-4b3b-99f2-927dae1ccdd5" name="Changes" comment="" />
-      <created>1725648614338</created>
+      <changelist id="8d9787cc-7e78-4392-bea7-81c2c8c041be" name="Changes" comment="" />
+      <created>1727116659382</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1725648614338</updated>
-      <workItem from="1725648618671" duration="5618000" />
-      <workItem from="1725655293475" duration="2367000" />
-      <workItem from="1725695011118" duration="7476000" />
-      <workItem from="1725805474147" duration="2266000" />
-      <workItem from="1725818180679" duration="50000" />
-      <workItem from="1725897096518" duration="6742000" />
-      <workItem from="1725949857138" duration="8023000" />
-      <workItem from="1725969568201" duration="1204000" />
-      <workItem from="1725978313984" duration="3969000" />
-      <workItem from="1726032677109" duration="6364000" />
-      <workItem from="1726039212479" duration="2102000" />
-      <workItem from="1726041423124" duration="3814000" />
-      <workItem from="1726066422898" duration="6370000" />
-      <workItem from="1726074364572" duration="2322000" />
-      <workItem from="1726081233013" duration="1641000" />
-      <workItem from="1726117793663" duration="7741000" />
-      <workItem from="1726161695020" duration="4393000" />
-      <workItem from="1726204681582" duration="4590000" />
-      <workItem from="1726212347513" duration="224000" />
-      <workItem from="1726212638235" duration="56000" />
-      <workItem from="1726212719391" duration="1406000" />
-      <workItem from="1726219273330" duration="2362000" />
-      <workItem from="1726293044209" duration="3208000" />
-      <workItem from="1726318759188" duration="649000" />
-      <workItem from="1726510832191" duration="6360000" />
-      <workItem from="1726549336039" duration="9073000" />
-      <workItem from="1726581312187" duration="354000" />
-      <workItem from="1726585053378" duration="3987000" />
-      <workItem from="1726601291261" duration="1307000" />
-      <workItem from="1726641056406" duration="2979000" />
-      <workItem from="1726664891559" duration="1522000" />
-      <workItem from="1726724715901" duration="7158000" />
+      <updated>1727116659382</updated>
+      <workItem from="1727116660713" duration="3759000" />
+      <workItem from="1727160361383" duration="3011000" />
     </task>
     <servers />
   </component>
